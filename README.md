@@ -1,4 +1,19 @@
 # Was ist die Redux-API? 
+Redux ist eine JavaScript-Bibliothek, die ein Konzept bereitstellt, durch das es möglich ist, den State einer Applikation zu lesen, zu ändern und abzubilden. Mit Redux wird ein Zustands-Container (Store) erstellt, der den globalen Applikations-Zustand verwaltet (State). Weiterhin hält der Store Methoden bereit, durch die der Zugriff zum State bereitgestellt wird und mit denen Daten im State verändert werden können:
+
+* getState => Daten im State werden gelesen
+* dispatch => Daten im State werden verändert
+* subscribe => Callback, sobald der State geändert wurde
+
+Letztendlich ist der Redux Store nur ein Objekt mit ein paar Methoden. Und mit dispatch werden weitere Objekte über die Reducer an den Store gegeben (Objekt mit type und payload), durch die im Reducer ein neuer State erstellt wird. Wir schieben also eigentlich nur simple Objekte mit synchronen Funktionen hin und her. Das ist fast alles.
+
+## Redux Toolkit
+Vor allem Anfängern empfiehlt sich, die Bibliothek Redux Toolkit zu benutzen, wenn Redux in einer Applikation eingebunden werden soll. Redux Toolkit stellt diverse Funktionen zur Verfügung, die das Schreiben von Actions und Reducer sowie das Erstellen eines Stores vereinfachen. Ohne theoretischen Hintergrund allerdings ist auch Redux Toolkit nicht sofort zugänglich. 
+Das Redux Toolkit-Paket wurde ursprünglich erstellt, um drei häufige Bedenken in Bezug auf Redux auszuräumen: 
+* Die Konfiguration eines Redux-Speichers ist zu kompliziert.
+* Es müssen sehr viele Packages hinzugefügt werden, damit Redux irgendetwas Nützliches tut.
+* Redux erfordert zu viel Boilerplate-Code*
+
 ## Drei Thesen zu Redux / Redux Toolkit
 * Redux ist eine erstklassige Lösung für die gemeinsame Status-Verwaltung.<br>
 * Redux ist ein globaler Status, muss aber nicht so verwendet werden.<br>
@@ -13,8 +28,21 @@ Wenn ein Komponenten-State Daten enthält, die von anderen Komponenten genutzt w
 
 Dies ist der übliche Datenfluss von React: Ein Event verändert den Status einer Komponente, die daraufhin den neuen Wert als Props an andere Komponenten weitergibt. Dies ist ein uni-direktionaler Datenaustausch, d.h. die Daten werden nur in eine Richtung weitergegeben. Je komplexer aber die Datenstrukturen werden und je differenzierter das User Interface sein soll, das diese Daten anzeigt, desto aufwendiger wird es, diese Daten durch mehrere Komponentenebenen durchzureichen.
 
+Hier kommt das globale <b>State-Management</b> ins Spiel, das den Zustand bzw. die notwendigen Daten einer Applikation unabhängig vom lokalen State der Komponenten in einer Art Container (Store) hält und den Komponenten zur Verfügung stellt.
 
-## Getting Started with Create React App
+<b>Die Daten werden demnach nicht mehr durch einzelne Komponentenebenen durchgereicht, sondern eine tief verschachtelte Komponente kann sich direkt mit dem globalen State verbinden und hat Zugriff auf dessen Daten.</b> Dies vereinfacht nicht nur den Datenfluss, sondern verhilft zu einer weit besseren Übersicht über den aktuellen Zustand der Applikation.
+
+<h3>Diese Projekt möchte die Funktionsweise der React-Redux-Toolkits veranschaulichen.</h3>
+
+# Installation
+## Using Create React App
+<b>Redux + Plain JS template</b><br>
+``npx create-react-app my-app --template redux``
+
+<b>Redux + TypeScript template</b><br>
+``npx create-react-app my-app --template redux-typescript``
+
+# Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) TS template.
 
