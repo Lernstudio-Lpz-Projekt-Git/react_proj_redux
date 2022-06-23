@@ -1,6 +1,14 @@
 # Was ist die Redux-API? 
-## State-Management mit Redux für React
+Redux ist eine erstklassige Lösung für die gemeinsame State-Verwaltung.
+Redux ist ein globaler State, muss aber nicht so verwendet werden.
+Wenn eine Komponente den freigegebenen State nicht direkt verwendet oder aktualisiert, sollte sie nicht davon abhängig sein. 
+
+## State-Management mit Redux & Redux Toolkit für React
 Mit React ist es möglich, komplexe Benutzeroberflächen zu erstellen. Je aufwendiger eine Applikation und je mehr Daten gleichzeitig verarbeitet werden, desto anspruchsvoller wird es, die Applikationsdaten zu verwalten und den Überblick über den aktuellen Zustand der Anwendung zu behalten. Wenn man diesen Zustand der Applikation organisiert, spricht man vom State-Management.
+
+Beim Programmieren einer komplexen Applikation stellt sich die Frage: In welchem Zustand oder Status befindet sich jetzt gerade die Applikation, und wie kann man diesen Status abbilden und Änderungen nachvollziehen?
+
+Wenn ein Komponenten-State Daten enthält, die von anderen Komponenten genutzt werden sollen, werden diese über Props an verschachtelte Unterkomponenten weitergegeben. In der Praxis bedeutet dies meist, dass die oberste Komponente innerhalb des Komponentenbaums den Zugriff auf veränderbare Daten im lokalen Komponenten-State hält und die Werte weitergibt. Wenn ein State-Wert durch Unterkomponenten geändert werden kann, gibt die oberste Komponente einen Action-Callback als Prop weiter, und die Unterkomponente kann damit den State der obersten Komponente ändern, die diese Änderungen wiederum zurück an die Unterkomponenten gibt.
 
 ## Getting Started with Create React App
 
