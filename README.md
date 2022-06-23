@@ -1,4 +1,8 @@
-# Getting Started with Create React App
+# Was ist die Redux-API? 
+## State-Management mit Redux für React
+Mit React ist es möglich, komplexe Benutzeroberflächen zu erstellen. Je aufwendiger eine Applikation und je mehr Daten gleichzeitig verarbeitet werden, desto anspruchsvoller wird es, die Applikationsdaten zu verwalten und den Überblick über den aktuellen Zustand der Anwendung zu behalten. Wenn man diesen Zustand der Applikation organisiert, spricht man vom State-Management.
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) TS template.
 
